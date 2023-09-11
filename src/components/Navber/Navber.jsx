@@ -13,7 +13,6 @@ const Navber = () => {
               <img src="./profile.png" />
             </div>
           </label>
-          <hr className="" />
         </div>
       </div>
     </>
