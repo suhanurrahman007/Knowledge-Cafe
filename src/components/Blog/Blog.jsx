@@ -1,7 +1,8 @@
 import { FaBookmark } from "react-icons/fa";
 
-const Blog = ({ blog, handleBookmark }) => {
+const Blog = ({ blog, handleBookmark, handleMarkBook }) => {
   const {
+    id,
     title,
     cover,
     author_img,
@@ -51,7 +52,10 @@ const Blog = ({ blog, handleBookmark }) => {
               </span>
             ))}
           </p>
-          <button className="btn btn-sm mt-5 bg-sky-600 hover:bg-sky-800 border-none text-white text-xs btn-block">
+          <button
+            onClick={() => handleMarkBook(reading_time, id)}
+            className="btn btn-sm mt-5 bg-sky-600 hover:bg-sky-800 border-none text-white text-xs btn-block"
+          >
             Mark as read
           </button>
         </div>
